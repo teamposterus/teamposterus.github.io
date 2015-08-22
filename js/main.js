@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$('#form-invite').validate({
 		//Validation rules
 		rules: {
-			"email":	{required: true, email: true}
+			"entry.785330106":	{required: true, email: true}
 		},
 		
 		//Disable error messages

@@ -392,6 +392,10 @@ input::-ms-input-placeholder {
     padding: 1.0rem 1.0rem 1.0rem 3.8rem !important;
 }
 
+.form-confirmation-message {
+    display: none;
+}
+
 /*FORM VALIDATION*/
 #error-message {
     display: none;

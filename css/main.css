@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'icomoon';
-    src:url('fonts/icomoon.eot?-ab2hv3');
-    src:url('fonts/icomoon.eot?#iefix-ab2hv3') format('embedded-opentype'),
-        url('fonts/icomoon.woff?-ab2hv3') format('woff'),
-        url('fonts/icomoon.ttf?-ab2hv3') format('truetype'),
-        url('fonts/icomoon.svg?-ab2hv3#icomoon') format('svg');
+    font-family: 'posterus';
+    src:url('fonts/posterus.eot?-qk387n');
+    src:url('fonts/posterus.eot?#iefix-qk387n') format('embedded-opentype'),
+        url('fonts/posterus.ttf?-qk387n') format('truetype'),
+        url('fonts/posterus.woff?-qk387n') format('woff'),
+        url('fonts/posterus.svg?-qk387n#posterus') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    font-family: 'icomoon';
+    font-family: 'posterus';
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -23,17 +23,19 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-email:before {
-    content: "\e601";
+.icon-mail:before {
+    content: "\e002";
 }
-
+.icon-arrow-right:before {
+    content: "\e095";
+}
 .icon-check:before {
-    content: "\e602";
+    content: "\e116";
+}
+.icon-close:before {
+    content: "\e117";
 }
 
-.icon-close:before {
-    content: "\e603";
-}
 
 
 /* ==========================================================================
@@ -173,11 +175,11 @@ a {
     line-height: 1.2;
     */
     text-decoration: none;
-    -webkit-transition: color .5s;
-    -moz-transition: color .5s;
-    -ms-transition: color .5s;
-    -o-transition: color .5s;
-    transition: color .5s;
+    -webkit-transition: color .25s;
+    -moz-transition: color .25s;
+    -ms-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
 }
 
 img {
@@ -191,72 +193,6 @@ img {
     -webkit-user-drag: none;
 }
 
-/***************/
-/* FORM FIELDS */
-/***********&***/
-
-.input-group {
-    margin: 0;
-    float: left;
-    width: 100%;
-    position: relative;
-}
-
-.input-field {
-    width: 100%;
-    margin: 0;
-    padding: 1.0rem;
-    vertical-align: middle;
-    font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    background-color: #FFFFFF;
-    color: #899e88;
-    border: 0;
-    border-radius: 0.2rem;
-    -webkit-border-radius: 0.2rem;
-    -moz-border-radius: 0.2rem;
-}
-.input-field:focus {
-    border-color: rgba(45, 68, 79, 0.5);
-    outline: 0;
-    outline: thin dotted \9;
-    /* IE6-9 */
-    -webkit-box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,.075), 0 0 8px rgba(45, 68, 79, 0.5);
-    -moz-box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,.075), 0 0 8px rgba(45, 68, 79, 0.5);
-    box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,.075), 0 0 8px rgba(45, 68, 79, 0.5);
-}
-
-
-input::-webkit-input-placeholder {
-    color: #b8c5b8;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.4;
-}
-input::-moz-input-placeholder {
-    color: #b8c5b8;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.4;
-}
-input::-o-input-placeholder {
-    color: #b8c5b8;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.4;
-}
-input::-ms-input-placeholder {
-    color: #b8c5b8;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.4;
-}
-
 
 /***********/
 /* BUTTONS */
@@ -266,7 +202,8 @@ input::-ms-input-placeholder {
     color: #FFFFFF;
     border: 0;
     border-color: transparent;
-    padding: 1.0rem;
+    background-color: transparent;
+    padding: 2.0rem;
     border-radius: 0.2rem;
     -webkit-border-radius: 0.2rem;
     -moz-border-radius: 0.2rem;
@@ -310,6 +247,255 @@ input::-ms-input-placeholder {
 .btn.btn-primary:hover {
     background-color: #859285;
 }
+
+/***************/
+/* FORM        */
+/***************/
+
+input::-webkit-input-placeholder {
+    color: #b8c5b8;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+input::-moz-input-placeholder {
+    color: #b8c5b8;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+input::-o-input-placeholder {
+    color: #b8c5b8;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+input::-ms-input-placeholder {
+    color: #b8c5b8;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.input-group {
+    margin: 0 0 2.0rem 0;
+    padding: 0;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    margin: 0;
+    padding: 2.0rem 2.0rem 2.0rem 6.0rem;
+    vertical-align: middle;
+    font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    background-color: transparent;
+    color: #899e88;
+    border: 0;
+    -webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input-field:focus {
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9
+    -webkit-box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,.075), 0 0 8px rgba(45, 68, 79, 0.5);
+    -moz-box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,.075), 0 0 8px rgba(45, 68, 79, 0.5);
+    box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,.075), 0 0 8px rgba(45, 68, 79, 0.5);
+    */
+}
+
+.input-group-circular {
+    overflow: hidden;
+    border-radius: 4.0rem;
+    -webkit-border-radius: 4.0rem;
+    -moz-border-radius: 4.0rem;
+    background-color: #505050;
+    -webkit-transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear;
+}
+
+.input-group-circular .input-overlay {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.0rem;
+    background-color: transparent;
+    color: #b8c5b8;
+    border-radius: 4.0rem;
+    -webkit-border-radius: 4.0rem;
+    -moz-border-radius: 4.0rem;
+    z-index: 100;
+    vertical-align: middle;
+    font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+    transition: transform 0.25s, opacity 0.25s;
+}
+
+.input-group-circular:hover {
+    color: #859285;
+    background-color: #859285;
+    -webkit-transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear;
+}
+
+.input-group-circular .input-field-circular {
+    border-radius: 4.0rem;
+    -webkit-border-radius: 4.0rem;
+    -moz-border-radius: 4.0rem;
+}
+
+/* initial icion styles */
+.input-group-circular .input-icon-left {
+    position: absolute;
+    color: #b8c5b8;
+    font-size: 2.4rem;
+    padding: 1.8rem;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.input-group-circular .input-icon-right {
+    position: absolute;
+    color: #b8c5b8;
+    font-size: 2.4rem;
+    padding: 1.8rem;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.input-group-circular .input-icon-action {
+    color: #b8c5b8;
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+}
+
+.input-group-circular.valid .input-icon-action:hover,
+.input-group-circular.valid .input-icon-action:focus {
+    color: #859285;
+    outline: 0;
+}
+
+/* disable hover effect on background color when input is active */
+.input-group-circular.input-filled {
+    color: #b8c5b8;
+    background-color: #ffffff;
+    -webkit-transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear;
+}
+
+.input-group-circular.input-filled:hover {
+    color: #b8c5b8;
+    background-color: #ffffff;
+    -webkit-transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear;
+}
+
+/* offset position to the left and make invisible */
+.input-group-circular .input-icon-left,
+.input-group-circular .input-icon-action,
+.input-group-circular .input-field-circular {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform:  translate3d(-4.0rem, 0, 0);
+    transform:          translate3d(-4.0rem, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+    transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+}
+
+/* reset to original position and fade in */
+.input-group-circular.input-filled .input-icon-left,
+.input-group-circular.input-filled .input-icon-action,
+.input-group-circular.input-filled .input-field-circular,
+.input-group-circular.input .input-overlay {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+    transition: transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+}
+
+/* slide overlay content to the right and fade out */
+.input-group-circular.input-filled .input-overlay {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(4.0rem, 0, 0);
+    transform: translate3d(4.0rem, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s;
+    transition: transform 0.25s, opacity 0.25s, visibility 0.25s;
+}
+
+
+/* icon styles for form validation states */
+
+/* change color of action icon when valid */
+.input-group-circular.valid .input-icon-action {
+    color: #000000;
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+}
+/* change color of action icon when valid */
+.input-group-circular.valid .input-icon-action:hover,
+.input-group-circular.valid .input-icon-action:focus {
+    color: #ffffff;
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+}
+
+/* hide action icon when submitted */
+.input-group-circular.submitted .input-icon-action {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform:  translate3d(4.0rem, 0, 0);
+    transform:          translate3d(4.0rem, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+    transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+}
+
+.input-group-circular .input-icon-submitted {
+    color: #b8c5b8;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform:  translate3d(-4.0rem, 0, 0);
+    transform:          translate3d(-4.0rem, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+    transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+}
+
+.input-group-circular.submitted .input-icon-submitted {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform:  translate3d(0, 0, 0);
+    transform:          translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+    transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+}
+
+
+
+/*****************/
+/* PAGE SPECIFIC */
+/*****************/
 
 #navbar {
     display: block;
@@ -375,21 +561,6 @@ input::-ms-input-placeholder {
     position: absolute;
     top: 0;
     right: 0;
-    border-radius: 0 0.2rem 0.2rem 0;
-    -webkit-border-radius: 0 0.2rem 0.2rem 0;
-    -moz-border-radius: 0 0.2rem 0.2rem 0;
-}
-
-#form-invite span.icon-email {
-    position: absolute;
-    color: #b8c5b8;
-    font-size: 2.4rem;
-    top: 0.8rem;
-    left: 0.8rem;
-}
-
-#form-invite .input-field {
-    padding: 1.0rem 1.0rem 1.0rem 3.8rem !important;
 }
 
 .form-confirmation-message {
@@ -397,6 +568,7 @@ input::-ms-input-placeholder {
 }
 
 /*FORM VALIDATION*/
+
 #error-message {
     display: none;
     font-weight: 600;
@@ -404,23 +576,23 @@ input::-ms-input-placeholder {
 }
 input.error,
 select.error {
-    background-color: #EFD2D5;
+    /*background-color: #EFD2D5;*/
     border: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition:    all 0.3s linear;
-    -ms-transition:     all 0.3s linear;
-    -o-transition:      all 0.3s linear;
-    transition:         all 0.3s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition:    all 0.25s linear;
+    -ms-transition:     all 0.25s linear;
+    -o-transition:      all 0.25s linear;
+    transition:         all 0.25s linear;
 }
 input.valid,
 select.valid {
-    background-color: #e6f9ee;
+    /*background-color: #e6f9ee;*/
     border: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition:    all 0.3s linear;
-    -ms-transition:     all 0.3s linear;
-    -o-transition:      all 0.3s linear;
-    transition:         all 0.3s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition:    all 0.25s linear;
+    -ms-transition:     all 0.25s linear;
+    -o-transition:      all 0.25s linear;
+    transition:         all 0.25s linear;
 }
 
 /* ==========================================================================

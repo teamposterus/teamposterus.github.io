@@ -719,14 +719,41 @@ select.valid {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media screen and (max-device-width: 600px), screen and (max-width: 600px) {
+
 }
+
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    
+    .splash-inner {
+        padding: 2.0rem !important;
+    }
+
+    .splash .logo-group {
+        padding: 0 0 2.0rem !important;
+    }
+
+    .splash .logo-group .logo {
+        font-size: 6.0rem !important;
+    }
+
+    .splash .logo-group h1 {
+        font-size: 1.4rem !important;
+    }
+
+    .splash .content {
+        padding: 0 0 2.0rem !important;
+    }
+
+    .splash .content h1 {
+        font-size: 3.2rem !important;
+    }
+
+}
+
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),

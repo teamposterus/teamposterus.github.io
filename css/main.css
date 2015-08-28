@@ -127,8 +127,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
-    font-size: 4.8rem;
+    font-size: 4.0rem;
     font-weight: 300;
+    line-height: 1.4;
 }
 
 h2 {
@@ -257,28 +258,28 @@ img {
 /***************/
 
 input::-webkit-input-placeholder {
-    color: #b8c5b8;
+    color: #BEC2C1;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.4;
 }
 input::-moz-input-placeholder {
-    color: #b8c5b8;
+    color: #BEC2C1;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.4;
 }
 input::-o-input-placeholder {
-    color: #b8c5b8;
+    color: #BEC2C1;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.4;
 }
 input::-ms-input-placeholder {
-    color: #b8c5b8;
+    color: #BEC2C1;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
@@ -302,7 +303,7 @@ input::-ms-input-placeholder {
     font-size: 1.6rem;
     font-weight: 300;
     background-color: transparent;
-    color: #899e88;
+    color: #5D6765;
     border: 0;
     -webkit-appearance: none; /* for box shadows to show on iOS */
 }
@@ -322,7 +323,8 @@ input::-ms-input-placeholder {
     border-radius: 4.0rem;
     -webkit-border-radius: 4.0rem;
     -moz-border-radius: 4.0rem;
-    background-color: #505050;
+    background-color: #0CAB9C;
+    border: 0.1rem solid #0CAB9C;
     -webkit-transition: background-color 0.25s linear;
     transition: background-color 0.25s linear;
 }
@@ -336,7 +338,7 @@ input::-ms-input-placeholder {
     width: 100%;
     padding: 2.0rem;
     background-color: transparent;
-    color: #b8c5b8;
+    color: #EBF8F7;
     border-radius: 4.0rem;
     -webkit-border-radius: 4.0rem;
     -moz-border-radius: 4.0rem;
@@ -354,8 +356,8 @@ input::-ms-input-placeholder {
 }
 
 .input-group-circular:hover {
-    color: #859285;
-    background-color: #859285;
+    color: #EBF8F7;
+    background-color: #0A9185;
     -webkit-transition: background-color 0.25s linear;
     transition: background-color 0.25s linear;
 }
@@ -369,7 +371,7 @@ input::-ms-input-placeholder {
 /* initial icion styles */
 .input-group-circular .input-icon-left {
     position: absolute;
-    color: #b8c5b8;
+    color: #0CAB9C;
     font-size: 2.4rem;
     padding: 1.8rem;
     top: 0;
@@ -379,7 +381,7 @@ input::-ms-input-placeholder {
 
 .input-group-circular .input-icon-right {
     position: absolute;
-    color: #b8c5b8;
+    color: #BEC2C1;
     font-size: 2.4rem;
     padding: 1.8rem;
     top: 0;
@@ -388,27 +390,19 @@ input::-ms-input-placeholder {
 }
 
 .input-group-circular .input-icon-action {
-    color: #b8c5b8;
+    color: #BEC2C1;
     -webkit-transition: color 0.25s;
     transition: color 0.25s;
 }
 
-.input-group-circular.valid .input-icon-action:hover,
-.input-group-circular.valid .input-icon-action:focus {
-    color: #859285;
-    outline: 0;
-}
-
 /* disable hover effect on background color when input is active */
 .input-group-circular.input-filled {
-    color: #b8c5b8;
     background-color: #ffffff;
     -webkit-transition: background-color 0.25s linear;
     transition: background-color 0.25s linear;
 }
 
 .input-group-circular.input-filled:hover {
-    color: #b8c5b8;
     background-color: #ffffff;
     -webkit-transition: background-color 0.25s linear;
     transition: background-color 0.25s linear;
@@ -454,14 +448,15 @@ input::-ms-input-placeholder {
 
 /* change color of action icon when valid */
 .input-group-circular.valid .input-icon-action {
-    color: #000000;
+    color: #5D6765;
     -webkit-transition: color 0.25s;
     transition: color 0.25s;
 }
-/* change color of action icon when valid */
+
 .input-group-circular.valid .input-icon-action:hover,
 .input-group-circular.valid .input-icon-action:focus {
-    color: #ffffff;
+    color: #464D4C;
+    outline: 0;
     -webkit-transition: color 0.25s;
     transition: color 0.25s;
 }
@@ -477,7 +472,7 @@ input::-ms-input-placeholder {
 }
 
 .input-group-circular .input-icon-submitted {
-    color: #b8c5b8;
+    color: #0CAB9C;
     opacity: 0;
     visibility: hidden;
     -webkit-transform:  translate3d(-4.0rem, 0, 0);
@@ -514,7 +509,7 @@ input::-ms-input-placeholder {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #b7d3b5;
+    background-color: #EBF8F7;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -525,7 +520,7 @@ input::-ms-input-placeholder {
     position: absolute;
     width: 100%;
     height: 100%;
-    padding: 10%;
+    padding: 6.0rem;
     top: 0;
     left: 0;
     bottom: 0;
@@ -536,23 +531,45 @@ input::-ms-input-placeholder {
     margin: auto;
 }
 
-.splash .logo {
+.splash .logo-group {
     width: 100%;
-    font-size: 14.0rem;
+    max-width: 80.0rem;
+    line-height: 1;
     margin: 0 auto;
-    color: #FFFFFF;
+    padding: 0 0 6.0rem;
+    color: #0CAB9C;
 }
 
-.splash h1 {
-    color: #FFFFFF;
-    /*text-shadow: 0.1rem 0.1rem 0.5rem #000000;*/
-    padding: 2.0rem 0;
+.splash .logo-group .logo {
+    font-size: 10.0rem;
+    margin: 0 0 1.0rem;
 }
 
-.splash p {
-    color: #FFFFFF;
+.splash .logo-group h1 {
+    font-size: 2.0rem !important;
+}
+
+.splash .content {
+    width: 100%;
+    max-width: 80.0rem;
+    margin: 0 auto;
+    padding: 0 0 6.0rem;
+}
+
+.splash .content h1 {
+    color: #5D6765;
     /*text-shadow: 0.1rem 0.1rem 0.5rem #000000;*/
-    padding: 0 0 2.0rem 0;
+    padding: 0 0 2.0rem;
+}
+
+.splash .content p {
+    color: #5D6765;
+    /*text-shadow: 0.1rem 0.1rem 0.5rem #000000;*/
+    padding: 0 0 2.0rem;
+}
+
+.splash .content p:last-child {
+    padding: 0 0 1.0rem !important;
 }
 
 .splash form {

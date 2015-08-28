@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'posterus';
-    src:url('fonts/posterus.eot?-qk387n');
-    src:url('fonts/posterus.eot?#iefix-qk387n') format('embedded-opentype'),
-        url('fonts/posterus.ttf?-qk387n') format('truetype'),
-        url('fonts/posterus.woff?-qk387n') format('woff'),
-        url('fonts/posterus.svg?-qk387n#posterus') format('svg');
+    src:url('fonts/posterus.eot?-f3jzyj');
+    src:url('fonts/posterus.eot?#iefix-f3jzyj') format('embedded-opentype'),
+        url('fonts/posterus.ttf?-f3jzyj') format('truetype'),
+        url('fonts/posterus.woff?-f3jzyj') format('woff'),
+        url('fonts/posterus.svg?-f3jzyj#posterus') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,6 +23,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-posterus:before {
+    content: "\e600";
+}
 .icon-mail:before {
     content: "\e002";
 }
@@ -35,6 +38,7 @@
 .icon-close:before {
     content: "\e117";
 }
+
 
 
 
@@ -534,8 +538,9 @@ input::-ms-input-placeholder {
 
 .splash .logo {
     width: 100%;
-    max-width: 14.0rem;
+    font-size: 14.0rem;
     margin: 0 auto;
+    color: #FFFFFF;
 }
 
 .splash h1 {

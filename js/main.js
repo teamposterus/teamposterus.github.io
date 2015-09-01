@@ -51,6 +51,7 @@ $(document).ready(function() {
 
 	// Form submit button trigger
 	$('a[data-input-type="submit"]').click(function(e){
+		e.preventDefault();
 		var inputGroup = $(this).parent('.input-group');
 		var form = inputGroup.parent('form');
 		// if input group hasclass valid

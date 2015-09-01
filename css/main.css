@@ -289,7 +289,6 @@ input::-ms-input-placeholder {
 .input-group {
     margin: 0 0 2.0rem 0;
     padding: 0;
-    float: left;
     width: 100%;
     position: relative;
 }
@@ -508,14 +507,15 @@ input::-ms-input-placeholder {
     float: left;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100vh;
     background-color: #EBF8F7;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     text-align: center;
 }
-
+/*
 .splash-inner {
     position: absolute;
     width: 100%;
@@ -527,6 +527,16 @@ input::-ms-input-placeholder {
     right: 0;
     overflow-x: hidden;
     overflow-y: auto;
+    text-align: center;
+    margin: auto;
+}
+*/
+
+.splash-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 6.0rem;
     text-align: center;
     margin: auto;
 }
@@ -615,6 +625,26 @@ select.valid {
     -ms-transition:     all 0.25s linear;
     -o-transition:      all 0.25s linear;
     transition:         all 0.25s linear;
+}
+
+
+.footer {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #5D6765;
+}
+
+.footer-inner {
+    width: 100%;
+    padding: 6.0rem;
+}
+.footer p {
+    text-align: center;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #EBF8F7;
 }
 
 /* ==========================================================================
@@ -728,6 +758,9 @@ select.valid {
 
 @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
     
+    .splash {
+        max-height: 60.0rem;
+    }
     .splash-inner {
         padding: 2.0rem !important;
     }
@@ -750,6 +783,10 @@ select.valid {
 
     .splash .content h1 {
         font-size: 3.2rem !important;
+    }
+
+    .footer-inner {
+        padding: 4.0rem;
     }
 
 }

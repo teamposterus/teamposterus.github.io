@@ -21,31 +21,59 @@ $(document).ready(function() {
 		
 	});
 
-	// When a valid email is entered, add 'valid' class to input group
-	$('.input-field').on('change keydown input paste propertychange', function() {
+	// Remove overlay when user clicks on it
+	$('.input-overlay').click(function(e) {
+		e.preventDefault();
+		$(this).parent('.input-group').addClass('input-filled');
+		// Wait for CSS transition for 'visible' to complete
+		setTimeout(function() {
+			$('input[data-input="email"]').focus();	
+		}, 500);
+	});
+
+	// Remove input-filled class if input field is empty when user clicks out of it
+	$('.input-field').on('blur', function() {
 		var inputField = $(this);
 		var inputGroup = inputField.parent('.input-group');
-		var form = inputField.parents('form');
-		var submitButton = inputField.siblings('a[data-input-type="submit"]').find('span');
-		if ( form.valid() ) {
-			submitButton.add(inputGroup).addClass('valid').removeClass('submitted');
-		}
-		else {
-			submitButton.add(inputGroup).removeClass('valid submitted');
+		if ( inputField.val().length === 0 ) {
+			inputGroup.removeClass('input-filled');
 		}
 	});
 
-	// If user submits form by pressing enter, submit form
-	$('.input-field').on('keypress', function(e) {
-		var inputGroup = $(this).parent('.input-group');
-		if ( e.which === 13 ) {
-			e.preventDefault();
-			if ( inputGroup.hasClass('submitted') ) {
-				return false
+	// Add input-filled class when user cursor is in input field
+	$('.input-field').on('focus', function() {
+		var inputField = $(this);
+		var inputGroup = inputField.parent('.input-group');
+		if ( inputField.val().length !== 0 ) {
+			inputGroup.addClass('input-filled');
+		}
+	});
+
+	// When a valid email is entered, add 'valid' class to input group
+	$('.input-field').on('keydown input paste propertychange', function(e) {
+		var inputField = $(this);
+		var inputGroup = inputField.parent('.input-group');
+		var form = inputField.parents('form');
+		var submitButton = inputField.siblings('a[data-input-type="submit"]');
+		var submitButtonContent = inputField.siblings('a[data-input-type="submit"]').find('span');
+				
+		if ( form.valid() ) {
+			if (e.which === 13) {
+				e.preventDefault();
+				if (inputGroup.hasClass('submitted')) {
+					return false;
+				}
+				else {
+					form.ajaxSubmit();
+					inputGroup.removeClass('valid').addClass('submitted');
+				}
 			}
 			else {
-				$('a[data-input-type="submit"]').trigger('click');
+				submitButtonContent.add(inputGroup).addClass('valid').removeClass('submitted');
 			}
+		}
+		else {
+			submitButtonContent.add(inputGroup).removeClass('valid submitted');
 		}
 	});
 
@@ -62,39 +90,6 @@ $(document).ready(function() {
 			inputGroup.removeClass('valid').addClass('submitted');
 		}
 	});
-
-	// Add input-filled class when user cursor is in input field
-	$('.input-field').on('focus', function() {
-		var inputField = $(this);
-		var inputGroup = inputField.parent('.input-group');
-		if ( inputField.val().length !== 0 ) {
-			inputGroup.addClass('input-filled');
-		}
-	});
-
-	// Remove input-filled class if input field is empty when user clicks out of it
-	$('.input-field').on('blur', function() {
-		var inputField = $(this);
-		var inputGroup = inputField.parent('.input-group');
-		if ( inputField.val().length === 0 ) {
-			inputGroup.removeClass('input-filled');
-		}
-	});
-
-	// Remove overlay when user clicks on it
-	$('.input-overlay').click(function(e) {
-		e.preventDefault();
-		$(this).parent('.input-group').addClass('input-filled');
-		// Wait for CSS transition for 'visible' to complete
-		setTimeout(function() {
-			$('input[data-input="email"]').focus();	
-		}, 500);
-		
-	});
-
-
-
-
 
 
 });

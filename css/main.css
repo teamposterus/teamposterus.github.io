@@ -298,9 +298,11 @@ input::-ms-input-placeholder {
     margin: 0;
     padding: 2.0rem 2.0rem 2.0rem 6.0rem;
     vertical-align: middle;
+    text-align: left;
     font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
+    line-height: 1.4;
     background-color: transparent;
     color: #5D6765;
     border: 0;
@@ -470,17 +472,62 @@ input::-ms-input-placeholder {
     transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
 }
 
-.input-group-circular .input-icon-submitted {
+/* hide input field when submitted */
+.input-group-circular.submitted .input-field-circular {
+    opacity: 0 !important;
+    /*visibility: hidden !important;*/
+    -webkit-transform:  translate3d(4.0rem, 0, 0);
+    transform:          translate3d(4.0rem, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+    transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+}
+
+.input-group-circular.submitted {
+    background-color: #0CAB9C;
+    border: 0.1rem solid #0CAB9C;
+    -webkit-transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear;
+}
+
+.input-group-circular.submitted:hover {
     color: #0CAB9C;
+    background-color: #0CAB9C;
+    -webkit-transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear;
+}
+
+/* show confirmation message after form is submitted */
+.input-group-circular .input-confirmation-message {
     opacity: 0;
     visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 2.0rem 2.0rem 2.0rem 6.0rem;
+    vertical-align: middle;
+    text-align: left;
+    font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #EBF8F7;
+    border: 0;
+    overflow: hidden;
+    border-radius: 4.0rem;
+    -webkit-border-radius: 4.0rem;
+    -moz-border-radius: 4.0rem;
+    background-color: transparent;
+    -webkit-transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear;
+    z-index: 100;
     -webkit-transform:  translate3d(-4.0rem, 0, 0);
     transform:          translate3d(-4.0rem, 0, 0);
     -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
     transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
 }
 
-.input-group-circular.submitted .input-icon-submitted {
+.input-group-circular.submitted .input-confirmation-message {
     opacity: 1;
     visibility: visible;
     -webkit-transform:  translate3d(0, 0, 0);
@@ -489,7 +536,33 @@ input::-ms-input-placeholder {
     transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
 }
 
+/* initial state for submitted icon */
+.input-group-circular .input-icon-submitted {
+    position: absolute;
+    color: #EBF8F7;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform:  translate3d(-4.0rem, 0, 0);
+    transform:          translate3d(-4.0rem, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+    transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
 
+    font-size: 2.4rem;
+    padding: 1.8rem;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* show submitted icon when submitted */
+.input-group-circular.submitted .input-icon-submitted {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform:  translate3d(0, 0, 0);
+    transform:          translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+    transition:         transform 0.25s, opacity 0.25s, visibility 0.25s, color 0.25s;
+}
 
 /*****************/
 /* PAGE SPECIFIC */
